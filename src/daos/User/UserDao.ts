@@ -1,6 +1,6 @@
 import { IUser } from '@entities/User';
 
-
+ 
 
 export interface IUserDao {
     getOne: (email: string) => Promise<IUser | null>;

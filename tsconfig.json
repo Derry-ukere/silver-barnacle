@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "experimentalDecorators": true,
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
     /* Basic Options */
@@ -63,6 +64,7 @@
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
 
     /* Advanced Options */
+    "strictPropertyInitialization": false,
     "skipLibCheck": true,                     /* Skip type checking of declaration files. */
     "forceConsistentCasingInFileNames": true,  /* Disallow inconsistently-cased references to the same file. */
     "paths": {
@@ -80,6 +82,9 @@
       ],
       "@server": [
         "src/Server"
+      ],
+      "@interface": [
+        "src/interfaces"
       ]
     },
   },
