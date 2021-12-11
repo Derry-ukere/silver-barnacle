@@ -11,4 +11,7 @@ export class  Menu implements MenuDto  {
 
     @OneToMany( () => Meal, meal => meal.menu)
     meal: MealDto;
+
+    @Column({ name: "created_at" })
+    createdAt?: Date;
 }
