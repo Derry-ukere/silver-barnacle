@@ -1,7 +1,10 @@
-import {} from '../interfaces/Iuser';
+import {} from 'typeorm';
+import {userDto} from '../interfaces/Iuser';
 
 export const AuthService = {
     async createUser (){
-        return 'create user'
+        return {
+            status: 'created'
+        }
     }
 }

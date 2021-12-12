@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { AuthController } from '../controllers/AuthController';
-import {handleRouteError} from '../shared/errors/handleRoutesError';
+import {handleRouteError} from '../handlers/errors/handleRoutesError';
 
 const authRouter = Router();
 

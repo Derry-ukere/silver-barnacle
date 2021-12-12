@@ -3,7 +3,7 @@ import { Request, Response } from "express";
 import UserDao from "@daos/User/UserDao.mock";
 import { paramMissingError } from "@shared/constants";
 import { AuthService } from "../services/AuthService";
-import {handleRouteError} from '../shared/errors/handleRoutesError'
+import {handleRouteError} from '../handlers/errors/handleRoutesError'
 
 const userDao = new UserDao();
 const { BAD_REQUEST, CREATED, OK } = StatusCodes;

@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import {handleRouteError} from '../shared/errors/handleRoutesError'
+import {handleRouteError} from '../handlers/errors/handleRoutesError'
 import authRouter from './auth'
 import userRouter from './users'
 
