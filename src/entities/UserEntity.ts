@@ -1,10 +1,9 @@
 import logger from "@shared/Logger";
 import { MenuDto } from "src/interfaces/Imenu";
 import { Entity, Column, PrimaryGeneratedColumn, OneToOne,JoinColumn,BaseEntity } from "typeorm";
-import {SellerDto} from '../interfaces/Iseller'
 import {Menu} from './Menu'
 
-@Entity({name: 'seller'})
+@Entity({name: 'user'})
 export class Seller extends BaseEntity {
     @PrimaryGeneratedColumn()
     id: string;
@@ -33,7 +32,7 @@ export class Seller extends BaseEntity {
 
     static async  findSellerByPhone(number:string | number) {
         try {
-            const seller = await this.createQueryBuilder('seller')
+            const seller = await this.createQueryBuilder('user')
             .where('seller.phone = :phone', {number})
             .getOne()
 

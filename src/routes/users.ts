@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { UserController} from '../controllers/Users';
+import { UserController} from '../controllers/UsersController';
 
 
 // User-route

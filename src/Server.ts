@@ -4,6 +4,7 @@ import path from 'path';
 import helmet from 'helmet';
 import { createConnection } from 'typeorm';
 import {  connectionOptions} from '@db/index'
+import {errorHandler} from './middlewares/errorHandler';
 
 import express, { NextFunction, Request, Response } from 'express';
 import StatusCodes from 'http-status-codes';
@@ -49,16 +50,10 @@ connectDb();
 // Add APIs
 app.use('/api', BaseRouter);
 
+
+
 // Print API errors
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-    logger.err(err, true);
-    return res.status(BAD_REQUEST).json({
-        error: err.message,
-    });
-});
-
-
+app.use(errorHandler);
 
 
 // Export express instance
